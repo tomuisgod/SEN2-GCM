@@ -12,8 +12,8 @@ def sucet(x, z):
         policko = []
     return(pole)  
 
-t = sucet(3, 3)
-j = sucet(3, 3)
+t = sucet(6, 6)
+j = sucet(6, 6)
 
 def sucet_matic(mat1, mat2):    
     p = []
@@ -31,14 +31,19 @@ def vypis(d):
 
 def nasobenie_vp(mat1, mat2):
     p = []
-    for x in range(len(mat1)):
+    for k in range(len(mat1)):
         p_p = []
-        for i in range(len(mat1)):
-            vys = t[x][i] *  j[x][i]
+
+        for x in range(len(mat1)):
+            vys = 0
+            for i in range(len(mat1)):
+                vys += t[0][i] *  j[i][x]
             p_p.append(vys)
         p.append(p_p)
     return(p)
 
-vypis(sucet_matic(t, j))
+
+print(vypis(t))
+print(vypis(j))
 vypis(nasobenie_vp(t, j))
 
