@@ -3,7 +3,13 @@ import tkinter
 
 canvas = tkinter.Canvas(width="300", height="300")
 
+# Pole
+a = 3
+sp = 300 / a
+#Matica
 m = []
+
+#Pocet modrych alebo zelenych
 z = 0
 m_1 = 0
 
@@ -18,14 +24,19 @@ for i in range(3):
             m_1 += 1
     m.append(r)
     
-for i in range(0, 4):
+for i in range(1, a + 1):
+    canvas.create_line(sp * i, 0, sp * i, 700, width=5)
+    canvas.create_line(0, sp * i, 700, sp * i, width=5)
+    
+    """
     canvas.create_line(100*i, 0, 100*i, 700)
     canvas.create_line(0, 100*i, 700, 100*i)
+    """
 
 for i in range(3):
     for j in range(3):
         a = m[i][j]
-        canvas.create_rectangle(100*i + 100*j, )
+        canvas.create_rectangle(100*i, 100*j, 100*i + 100, 100*j + 100, fill=("green" if a > 50 else "blue"))
         canvas.create_text(100*i + 50, 100*j + 50, text=str(a), fill="black", font=('Helvetica 13 bold'))
 
 
