@@ -6,7 +6,7 @@ canvas = tkinter.Canvas(width="300", height="300")
 # Pole
 a = 3
 sp = 300 / a
-p = [[1,2,3], [4,5,6], [7,8,0]] 
+p = [[1,2,3], [4,5,6], [7,8,""]] 
 
 # Tvorenie pola
 for i in range(1, a + 1):
@@ -36,9 +36,10 @@ def klik(a):
         canvas.move(p[r][c], 0, -100)
         p[r][c],p[r][c-1] = p[r][c-1],p[r][c]
 
+    if p == [[1,2,3], [4,5,6], [7, 8, ""]]:
+        canvas.delete("all")
+        canvas.create_text(150, 150, text="gg", font="50")
 canvas.bind("<Button-1>", klik)
-
-# NENI HOTOVE
 
 canvas.pack()
 canvas.mainloop()
