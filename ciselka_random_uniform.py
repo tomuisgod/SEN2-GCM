@@ -34,13 +34,13 @@ def med(a):
         return neroztriedene[len(neroztriedene) // 2]
 
 
-for k in range(neroz_naozaj.index(med(neroztriedene)), 1, -1):
-    neroztriedene[k], neroztriedene[k - 1] = neroztriedene[k - 1][k]
+for k in range(neroz_naozaj.index(med(neroztriedene)), 0, -1):
+    neroz_naozaj[k], neroz_naozaj[k - 1] = neroz_naozaj[k - 1], neroz_naozaj[k]
+
 
 def aritmeticky_priemer(a):
+    return float(sum(neroztriedene)) / float(sum(neroztriedene))
 
-    return float(sum(neroztriedene))/float(sum(neroztriedene))
 
 print(med(neroztriedene))
 print(bbs_print(neroztriedene))
-
