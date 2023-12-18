@@ -17,13 +17,15 @@ for i in range(n):
 
 neroz_naozaj = neroztriedene[:]
 
+
 def bbs_print(a):
     for x in range(len(neroztriedene)):
-        for i in range(len(neroztriedene)-1-x):
-            if neroztriedene[i] > neroztriedene[i+1]:
-                neroztriedene[i],neroztriedene[i+1] = neroztriedene[i+1], neroztriedene[i]
+        for i in range(len(neroztriedene) - 1 - x):
+            if neroztriedene[i] > neroztriedene[i + 1]:
+                neroztriedene[i], neroztriedene[i + 1] = neroztriedene[i + 1], neroztriedene[i]
 
     return neroztriedene
+
 
 def med(a):
     if len(neroztriedene) % 2 == 0:
@@ -31,5 +33,14 @@ def med(a):
     else:
         return neroztriedene[len(neroztriedene) // 2]
 
+
+for k in range(neroz_naozaj.index(med(neroztriedene)), 1, -1):
+    neroztriedene[k], neroztriedene[k - 1] = neroztriedene[k - 1][k]
+
+def aritmeticky_priemer(a):
+
+    return float(sum(neroztriedene))/float(sum(neroztriedene))
+
 print(med(neroztriedene))
 print(bbs_print(neroztriedene))
+
