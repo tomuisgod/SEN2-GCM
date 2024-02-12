@@ -1,0 +1,2 @@
+pokoj:klid
+non pokoj:neklid
