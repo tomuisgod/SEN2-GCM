@@ -1,3 +1,7 @@
+# Kod nie je vo finalnej verzii ku dnesnemu dnu (19. 2. 2024)
+# Tento program kontroluje vetu, ktory zadame v inpute. Kontroluje ho takym sposobom, ze kontroluje pismena a rozraduje ich do listu.
+# Na zaklade poctu pismen vo vete program zisti, v akom jazyku je tato veta
+
 s = input("...")
 pocet_pismen = []
 tab = open("doc.txt", "r")
