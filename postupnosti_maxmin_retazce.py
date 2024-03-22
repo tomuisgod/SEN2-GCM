@@ -52,16 +52,6 @@ def med(postupn_C):
 
     return med
 
-slovo = input("Zadaj slovo: ")
-
-dlzka = len(slovo)
-
-for i in range(dlzka * 2 - 1):
-    if i < dlzka:
-        print(slovo[:i + 1])
-    else:
-        print(slovo[:2 * dlzka - i - 1])
-
 
 # Volanie funkcii + výpis
 postup_A = n_p("A")
