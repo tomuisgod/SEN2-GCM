@@ -1,6 +1,0 @@
-21,Jano Bukva,42
-4,Puro,456
-46,Kotlar,43
-19,Truba,467
-67,Holub,10
-714,Vajo,416
